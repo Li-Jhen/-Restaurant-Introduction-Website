@@ -1,0 +1,369 @@
+body {
+    font-family: Microsoft JhengHei;
+}
+.current-page {
+    text-decoration: underline;
+
+}
+
+/* 導覽列 -ICON */
+.navbar-icon {
+    height: 30px;
+    
+    margin-left: 100px;
+    /* 設定中 */
+}
+
+/* 導覽列 -至頂透明 */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.120);
+}
+
+/* 導覽列-陰影 */
+.nav-shadow {
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.37); */
+    box-shadow: none;
+}
+
+/* 導覽列-滾動至下方變色&陰影 */
+.navbar-scroll {
+    background-color: rgb(245, 52, 52);
+    /*設置滾動時的背景色*/
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.37);
+}
+
+.nav-link {
+    border-radius: 10px;
+}
+
+.nav-link:hover {
+    background-color: rgba(245, 52, 52, 0.856);
+    border-radius: 10px;
+    /* 修改圆角的大小 */
+    transform: scale(1.1);
+}
+
+.dropdown-item:hover {
+    background-color: rgba(245, 52, 52, 0.856);
+    color: white;
+}
+
+/* 導覽列 -end */
+
+/* search icon*/
+.bi-search-heart {
+    width: 1.7em;
+    height: 1.7em;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.btn-search {
+    border: none;
+}
+
+.btn-search:hover {
+    border: none;
+    transform: scale(1.1);
+}
+
+/* search icon -end */
+
+/* 回到頂部 */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    display: none;
+    z-index: 9;
+}
+
+.bi-arrow-up-circle-fill {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.back-to-top:hover .bi-arrow-up-circle-fill {
+    transform: translate(-50%, -50%) scale(1.2);
+    /* 放大倍率可以根據需要進行調整 */
+}
+
+/* 回到頂部 end */
+
+/* home image*/
+.home-img-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    place-items: center;
+}
+
+/* header  */
+.header {
+    position: relative;
+}
+
+/* headerimg*/
+.headerimg {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.headerimg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*header img上黑影*/
+.header-p1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.400);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    flex-direction: column;
+    /* 垂直排列元素 */
+}
+
+/* 按钮位置 */
+.scroll-btn-wrapper {
+    position: absolute;
+    bottom: 50px; /* 根据需要调整按钮距离底部的距离 */
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+#scrollBtn {
+    animation: floatAnimation 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes floatAnimation {
+    from {
+      transform: translateY(0);
+    }
+
+    to {
+      transform: translateY(10px);
+    }
+  }
+
+/* home -內文背景 */
+.main-bgimg {
+    /*寬高自動響應*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+/* home -內文文字 */
+.home-p1 {
+    width: 70%;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+/* home -餐廳縮圖LOGO -start*/
+.home-img {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    overflow: hidden;
+
+}
+
+.home-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    transition: opacity 1s ease;
+    opacity: 1;
+
+}
+
+.home-img .img-1-1 {
+    opacity: 0;
+}
+
+.home-img:hover .img-logo {
+    opacity: 0;
+}
+
+.home-img:hover .img-1-1 {
+    opacity: 1;
+}
+
+.caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    font-size: 20px;
+}
+
+.home-img:hover .caption {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.411);
+    opacity: 1;
+}
+
+/* home -餐廳縮圖LOGO -end*/
+
+/*home -style -end*/
+
+/*About*/
+.headerimg2 {
+    height: 60vh;
+    overflow: hidden;
+}
+
+.headerimg2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header-p2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.400);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* 垂直排列元素 */
+}
+
+
+.about {
+    text-align: center;
+}
+
+.about-main {
+    max-width: 650px;
+    text-align: left;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+.external-link {
+    text-align: right;
+}
+
+.small-text {
+    font-size: smaller;
+}
+
+.Bib {
+    display: flex;
+    justify-content: center;
+}
+
+/* 小初店*/
+/* header -分隔線 */
+.header-line {
+    width: 50px;
+    height: 3px;
+    background-color: white;
+}
+
+.left-section h3 {
+    text-align: center;
+}
+
+
+.divbtn {
+    cursor: pointer;
+    background-color: rgb(255, 251, 245);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+}
+
+.divbtn:hover {
+    color: rgba(245, 52, 52, 0.856);
+    transform: scale(1.1);
+}
+
+/* .right-section { */
+
+/* 右半部分的样式 */
+/* } */
+
+
+/*輪播圖*/
+.carousel-item>img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+}
+
+/*輪播圖內-下方字*/
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 60px;
+}
+
+
+/* footer。。 */
+
+.bi-youtube {
+    color: red;
+}
+
+.bi-youtube:hover {
+    color: rgb(205, 14, 14);
+}
+
+.bi-line {
+    color: rgb(0, 200, 84);
+}
+
+.bi-line:hover {
+    color: rgb(5, 159, 69);
+}
+
+.bi-twitter {
+    color: rgb(29, 161, 242);
+}
+
+.bi-twitter:hover {
+    color: rgb(34, 143, 210);
+}
+
+.bi-instagram:hover stop:first-child {
+    stop-color: rgb(106, 20, 155);
+  }
+  
+.bi-instagram:hover stop:nth-child(2) {
+    stop-color: rgb(182, 36, 103);
+  }
+  
+.bi-instagram:hover stop:last-child {
+    stop-color: rgb(255, 215, 0);
+  }
+  
+
